@@ -6,7 +6,7 @@
 <img width="1440" alt="Screen Shot 2024-09-14 at 3 39 57 AM" src="https://github.com/user-attachments/assets/a15c297a-3c4d-49a5-b284-99cc839b86b8">
 
 
-- [Demo Project]()
+- [Demo Project](https://sarvinnazeri.github.io/Tabs/)
   
 - Developed by sarvin nazeri
 
