@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/master.css">
+    <title>Document</title>
+</head>
+
+<body class="justify-center items-center flex h-[100vh]">
+    <div class="flex *:w-full flex-wrap w-[390px]">
+        <ul class="flex  *:w-[130px] *:cursor-pointer rounded-md text-white">
+            <li class="justify-center items-center flex bg-[#447284] py-5 rounded-ss-md">front</li>
+            <li class="justify-center items-center flex bg-[#447284] py-5">end</li>
+            <li class=" justify-center items-center flex bg-[#447284] py-5 rounded-tr-lg">developer</li>
+        </ul>
+        <div
+            class="flex *:w-full flex-wrap duration-500 bg-[#303233] *:text-[white] *:left-[-100%] *:absolute relative mainDiv overflow-hidden rounded-b-md ">
+            <p class="flex  p-10 duration-500"> 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem
+                aperiam facere magnam deserunt
+                adipisci illo ea corporis provident repellendus repudiandae.</p>
+            <p class="flex  p-10 duration-500">2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+                porro,
+                provident voluptas est eos
+                sequi ad ut unde? Voluptates voluptatum ut nostrum? Doloribus, veritatis maxime?Lorem ipsum dolor sit
+                amet consectetur adipis</p>
+            <p class="flex  p-10 duration-500">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                nesciunt
+                velit similique et
+                tempora!
+                Officiis sint expedita odio exercitationem eum laudantium accusamus sunt distinctio, quos reiciendis est
+                iusto obcaecati non. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, animi!</p>
+        </div>
+    </div>
+   
+</body>
+<script>
+    const p = document.querySelectorAll('p')
+    const li = document.querySelectorAll('li')
+    li.forEach((val, i) => {
+
+        val.addEventListener('click', () => {
+            /////reset///
+            li.forEach((value, index) => {
+                li[index].classList.remove('li')
+                li[index].classList.remove('liw' + index)
+                li[index].style.backgroundColor = '#447284'
+                li[index].style.color = 'white'
+
+            })
+            p.forEach((value, index) => {
+                value.style.left = '-100%'
+                p[i].setAttribute('data-h', p[i].clientHeight)
+            })
+            /////////
+            console.log(p[i].innerHTML)
+            p[i].style.left = '0'
+            p[i].parentElement.style.height = p[i].getAttribute('data-h') + 'px'
+            li[i].classList.add('li')
+            li[i].classList.add('liw' + i)
+            li[i].style.backgroundColor = '#303233'
+            li[i].style.color = '#447284'
+
+        })
+    })
+</script>
+
+</html>
